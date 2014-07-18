@@ -44,13 +44,14 @@ function getPeriod(period){
 /*
 	Clear the cache according to the specified period
 */ 
-function clearCache(p){
+function clearCache(time, options){
 	 
- 	elapsed_time = period[p] ;
+ 	elapsed_time = period[time] ;
 
  	// Cleaning the cache
- 	chrome.browsingData.removeCache(
- 		{"since": elapsed_time}, 
+ 	chrome.browsingData.remove(
+ 		{"since": elapsed_time},
+ 		options, //Data to clear 
  		callback
  	);
 
