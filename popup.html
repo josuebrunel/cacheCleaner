@@ -4,27 +4,28 @@
 		<title>Cache Cleaner</title>
 		<!--	 CSS -->
 		<link rel="stylesheet" href="static/css/style.css">
-		<link href="/static/css/bootstrap.min.css" rel="stylesheet">
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 		<!-- JS -->
 		<script src="static/js/jquery.min.js"></script>
-		<script src="static/js/bootstrap.min.js"></script>
 		<script src="popup.js"></script>
 	</head>		
 	<body>
-		<div class="container span4">
+		<div id="container">
 			<form class="text-center">
-				<label class="top-buffer" for="Clear">Clear since</label>
-				<select  id="since" name="since">
-					<option value="ten_minutes">The last 10 mins</option>
-					<option value="half_hour">The last half Hour</option>
-					<option value="hour">The last Hour</option>
-					<option value="day">The last Day</option>
-					<option value="week">The last Week</option>
-					<option value="month">The last Month</option>
-					<option value="ever">Ever</option>
-				</select>
-				<br/>
-				<button class="btn btn-danger btn-xs center-block top-buffer" id="submit" type="button">Clear Cache</button>
+				<label class="title" for="title">Smart Cache Cleaner</label>
+				<div class="inputs">
+					<input class="days" type="text" value="00" />
+					<input class="hours" type="text" value="00" />
+					<input class="min" type="text" value="01" />
+					<input class="sec" type="text" value="00"/>
+				</div>
+				<div class="txt_input">
+					<label class="txt_days" for="txt_days">Days</label>
+					<label class="txt_hours" for="txt_hours">Hours</label>
+					<label class="txt_min" for="txt_min">Min</label>
+					<label class="txt_sec" for="txt_sec">Sec</label>
+				</div>
+				<button  id="submit" type="button">Done</button>
 			</form>
 		</div>
 	</body>
