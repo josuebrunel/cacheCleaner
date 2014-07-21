@@ -47,7 +47,7 @@ function getPeriod(period){
 function clearCache(time, options){
 	 
  	elapsed_time = period[time] ;
-
+ 	console.log(options);
  	// Cleaning the cache
  	chrome.browsingData.remove(
  		{"since": elapsed_time},
