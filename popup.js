@@ -1,4 +1,13 @@
 $('document').ready(function(){
+	/*Detect changes on all*/
+	$('#all').change(function(){
+		$('input[type=checkbox]').each(function(){
+			var self = $(this);
+			self.prop('checked', true);
+		})
+	});
+
+	/**********************/ 
 	$('#submit').click(function(){
 		var options = {};
 		var val = $('#since').val();
@@ -7,11 +16,13 @@ $('document').ready(function(){
 		$('.checkbox input').each(function(){
 			var self = $(this);
 			var name = self.attr('name');
-			if(self.is(':checked')){ //If options checked
-				options[name] = true;
-			}
-			else{
-				options[name] = false;
+			if(name !== 'all'){
+				if(self.is(':checked')){ //If options checked
+					options[name] = true;
+				}
+				else{
+					options[name] = false;
+				}
 			}
 		})
 		console.log(options);

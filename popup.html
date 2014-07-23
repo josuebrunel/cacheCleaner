@@ -9,14 +9,20 @@
 		<script src="static/js/jquery.min.js"></script>
 		<script src="static/js/bootstrap.min.js"></script>
 		<script src="popup.js"></script>
-	</head>		
+	</head>
 	<body>
 		<div class="container span4">
 			<form class="form-group">
+        
 				<label class="top-buffer" for="Clear">Clear</label>
 				<!-- What to clear-->
 				<div class="checkbox">
-					<label> 
+					<label>
+						<input id="all" type="checkbox" name="all" value="all"> All
+					</label>
+				</div>
+				<div class="checkbox">
+					<label>
 						<input type="checkbox" name="cache" value="cache"> Cache
 					</label>
 				</div>
