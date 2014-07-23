@@ -1,10 +1,19 @@
 $('document').ready(function(){
 	/*Detect changes on all*/
 	$('#all').change(function(){
-		$('input[type=checkbox]').each(function(){
-			var self = $(this);
-			self.prop('checked', true);
-		})
+		if($(this).is(':checked')){
+			$('input[type=checkbox]').each(function(){
+				var self = $(this);
+				self.prop('checked', true);
+			})	
+		}
+		else{
+			$('input[type=checkbox]').each(function(){
+				var self = $(this);
+				self.prop('checked', false);
+			})	
+		}
+		
 	});
 
 	/**********************/ 
