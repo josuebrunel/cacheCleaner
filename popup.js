@@ -13,9 +13,7 @@ $('document').ready(function(){
 				self.prop('checked', false);
 			})	
 		}
-		
 	});
-
 	/**********************/ 
 	$('#submit').click(function(){
 		var options = {};
